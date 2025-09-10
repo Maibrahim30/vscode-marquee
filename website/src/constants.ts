@@ -50,11 +50,11 @@ export const NAVIGATION: Navigation = {
   'Start': {
     href: '/'
   },
-  'Docs': {
-    href: '/docs/start',
-    children: DOCS_CONTENT
-  },
-  'Marketplace': {
-    href: 'https://marketplace.visualstudio.com/items?itemName=stateful.marquee'
-  }
+  // 'Docs': {
+  //   href: '/docs/start',
+  //   children: DOCS_CONTENT
+  // },
+  // 'Marketplace': {
+  //   href: 'https://marketplace.visualstudio.com/items?itemName=stateful.marquee'
+  // }
 }
