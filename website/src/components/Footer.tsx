@@ -1,4 +1,4 @@
-import Script from "next/script";
+import Script from 'next/script'
 import {
   Flex,
   FlexProps,
@@ -8,64 +8,64 @@ import {
   useColorModeValue,
   Icon,
   Box,
-} from "@chakra-ui/react";
-import { SiGithub, SiDiscord } from "react-icons/si";
+} from '@chakra-ui/react'
+import { SiGithub, SiDiscord } from 'react-icons/si'
 
-import { GOOGLE_ANALYTICS_ID, IS_PROD } from "../constants";
+import { GOOGLE_ANALYTICS_ID, IS_PROD } from '../constants'
 
 const socialLinks = [
   {
-    href: "https://discord.gg/BQm8zRCBUY",
+    href: 'https://discord.gg/BQm8zRCBUY',
     icon: SiDiscord,
   },
   {
-    href: "https://github.com/stateful/vscode-marquee",
+    href: 'https://github.com/stateful/vscode-marquee',
     icon: SiGithub,
   },
-];
+]
 
 export const Footer = (props: FlexProps) => {
   return (
     <>
       <Flex
         as="footer"
-        flexDirection={"column"}
-        align={"center"}
+        flexDirection={'column'}
+        align={'center'}
         py="8rem"
         {...props}
       >
-        <Box mb={3} justifyContent={"space-around"}>
+        <Box mb={3} justifyContent={'space-around'}>
           {socialLinks.map((link, i) => (
             <Link
               key={i}
               href={link.href}
               isExternal
               bottom={0}
-              display={"inline-block"}
-              lineHeight={"2em"}
-              position={"relative"}
-              color={useColorModeValue("gray.600", "gray.400")}
-              transitionProperty={"color, bottom"}
-              transitionDuration={"0.5s"}
-              _hover={{ color: "marquee", bottom: "5px" }}
+              display={'inline-block'}
+              lineHeight={'2em'}
+              position={'relative'}
+              color={useColorModeValue('gray.600', 'gray.400')}
+              transitionProperty={'color, bottom'}
+              transitionDuration={'0.5s'}
+              _hover={{ color: 'marquee', bottom: '5px' }}
             >
               <Icon mx={2} boxSize={5} as={link.icon} />
             </Link>
           ))}
         </Box>
-        <Text mb={2} color={"gray.500"}>
+        <Text mb={2} color={'gray.500'}>
           &copy; 2020-2025 Stateful, Inc. All rights reserved.
         </Text>
         <Link href="https://stateful.com" isExternal>
           <Image
             w={100}
-            filter={"grayscale(100%)"}
+            filter={'grayscale(100%)'}
             src={useColorModeValue(
-              "/assets/logo.png",
-              "/assets/logo_white.png"
+              '/assets/logo.png',
+              '/assets/logo_white.png'
             )}
-            padding={"10px"}
-            width={"200px"}
+            padding={'10px'}
+            width={'200px'}
             alt="Stateful"
           />
         </Link>
@@ -87,5 +87,5 @@ export const Footer = (props: FlexProps) => {
         </>
       )}
     </>
-  );
-};
+  )
+}
